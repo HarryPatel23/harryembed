@@ -1,165 +1,231 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #1a237e;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-  }
-  nav .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: 700;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #1a237e;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+nav .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+nav ul li a:hover {
+  color: #ffca28;
+}
+#home {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321310764-9081c1b7e1f3');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+#home h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+#home p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.cta {
+  background: #ffca28;
+  color: #1a237e;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.cta:hover {
+  background: #ffb300;
+}
+section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.project {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.project h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 0;
+}
+.project a {
+  color: #1a237e;
+  text-decoration: none;
+  font-weight: 700;
+}
+.project a:hover {
+  color: #ffca28;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+form input, form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+form button {
+  background: #1a237e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #ffca28;
+  color: #1a237e;
+}
+footer {
+  background: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer a {
+  color: #ffca28;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  color: #ffb300;
+}
+
+/* Style for the success and error messages */
+#form-status, #form-error {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif; /* Match your existing font */
+  font-size: 1.1em;
+  font-weight: 700; /* Bold text */
+  display: none; /* Hidden by default */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto; /* Centered */
+}
+
+/* Success message style */
+#form-status {
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Light green border */
+}
+
+/* Error message style */
+#form-error {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Light red border */
+}
+
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
+    flex-direction: column;
   }
   nav ul li {
-    margin: 0 15px;
-  }
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-  }
-  nav ul li a:hover {
-    color: #ffca28;
-  }
-  #home {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321310764-9081c1b7e1f3');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    margin: 10px 0;
   }
   #home h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2em;
   }
-  #home p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  .cta {
-    background: #ffca28;
-    color: #1a237e;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-  }
-  .cta:hover {
-    background: #ffb300;
-  }
-  section {
-    padding: 60px 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  .project {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .project h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px 0;
-  }
-  .project a {
-    color: #1a237e;
-    text-decoration: none;
-    font-weight: 700;
-  }
-  .project a:hover {
-    color: #ffca28;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    width: 100%;
-  }
-  form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-  }
-  form button {
-    background: #1a237e;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  form button:hover {
-    background: #ffca28;
-    color: #1a237e;
-  }
-  footer {
-    background: #1a237e;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  footer a {
-    color: #ffca28;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  footer a:hover {
-    color: #ffb300;
-  }
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-    }
-    nav ul li {
-      margin: 10px 0;
-    }
-    #home h1 {
-      font-size: 2em;
-    }
-  }
+/* Dark Mode Base */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode nav {
+  background-color: #222;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .project {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode footer {
+  background-color: #222;
+}
+
+body.dark-mode a {
+  color: #ffca28;
+}
+
+/* Dark mode button */
+.dark-mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: white;
+  margin-left: 20px;
+}
+
+}
