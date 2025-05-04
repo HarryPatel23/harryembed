@@ -1,3 +1,5 @@
+console.log("Harshil Patel's Portfolio website loaded!");
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -25,7 +27,6 @@ document.querySelector('form').addEventListener('submit', async function(e) {
       body: formData,
       headers: {
         Accept: "application/json",
-
       },
     });
 
@@ -47,12 +48,13 @@ document.querySelector('form').addEventListener('submit', async function(e) {
     errorStatus.textContent = "Error: Could not send message.";
     status.style.display = "none"; // Hide success message
   }
-  const toggleBtn = document.getElementById('darkToggle');
+});
+
+// Dark mode toggle
+const toggleBtn = document.getElementById('darkToggle');
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 
   // Optional: toggle icon
   toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-});
-
 });
