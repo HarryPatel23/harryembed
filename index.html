@@ -7,7 +7,7 @@
   <title>Harshil Patel - Portfolio</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -21,57 +21,58 @@
       </ul>
       <button id="darkToggle" class="dark-mode-btn">🌙</button>
     </nav>
-    <section id="home">
-      <img src="assets/profile.jpg" alt="Harshil Patel Profile Picture" class="profile-pic">
+    <section id="home" data-aos="fade-up" data-aos-duration="800">
+      <img src="assets/profile.jpg" alt="Harshil Patel Profile Picture" class="profile-pic" data-aos="zoom-in">
       <h1>Welcome to My Portfolio</h1>
       <p>Hi, I'm Harshil, a passionate programmer building innovative solutions for individual and commercial purposes.</p>
       <a href="#projects" class="cta">View My Work</a>
     </section>
   </header>
-  <section id="about">
+  <section id="about" data-aos="fade-right" data-aos-duration="800">
     <h2>About Me</h2>
     <p>I’m a 22-year-old self-taught programmer from India, specializing in Embedded Systems. I've completed my Bachelor's in Electrical Engineering from Pandit Deendayal Energy University. I love creating IoT devices and smart automation solutions for individual and commercial purposes. I'm currently working on building CoreCode Systems - A onestop solution for Industrial and Home Automation.</p>
   </section>
-  <section id="projects">
+  <section id="projects" data-aos="fade-up" data-aos-duration="800">
     <h2>My Projects</h2>
     <div class="project-grid">
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="100">
         <img src="assets/project1.jpg" alt="Gesture Controlled Light">
         <h3>Gesture Controlled Light</h3>
         <p>Controls lighting with hand gestures using APDS-9960 sensor and Arduino.</p>
         <a href="https://github.com/HarryPatel23/gesture-controlled-light" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="200">
         <img src="assets/project2.jpg" alt="LED Matrix Display">
         <h3>LED Matrix Display</h3>
         <p>Displays custom patterns and text on an 8x8 LED matrix using MAX7219 and Arduino.</p>
         <a href="https://github.com/HarryPatel23/led-matrix-display" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="300">
         <img src="assets/project3.jpg" alt="SmartHome IoT">
         <h3>SmartHome IoT</h3>
         <p>A Wi-Fi-enabled system to control home appliances using ESP32 and a mobile app.</p>
         <a href="https://github.com/HarryPatel23/smarthome-iot" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="400">
         <img src="assets/project4.jpg" alt="Smart Weather Station">
         <h3>Smart Weather Station</h3>
         <p>Monitors temperature, humidity, and pressure, with data sent to a cloud dashboard.</p>
         <a href="https://github.com/HarryPatel23/smart-weather-station" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="500">
         <img src="assets/project5.jpg" alt="Temp Humidity Sensor">
         <h3>Temp Humidity Sensor</h3>
         <p>Measures temperature and humidity using DHT11 sensor and displays on an LCD.</p>
         <a href="https://github.com/HarryPatel23/temp-humidity-sensor" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="600">
         <img src="assets/project6.jpg" alt="Ultrasonic Distance Alarm">
         <h3>Ultrasonic Distance Alarm</h3>
         <p>Triggers an alarm when objects are too close using an HC-SR04 ultrasonic sensor.</p>
         <a href="https://github.com/HarryPatel23/ultrasonic-distance-alarm" target="_blank">View on GitHub</a>
       </div>
-      <div class="project">
+      <div class="project" data-aos="fade-up" data-aos-delay="700">
+        <div class="project" data-aos="fade-up" data-aos-delay="700">
         <img src="assets/project7.jpg" alt="Voltage Stabilizer">
         <h3>Voltage Stabilizer <span class="highlight-badge">Main Project</span></h3>
         <p>A microcontroller-based system to regulate voltage for stable power supply in appliances.</p>
@@ -79,7 +80,7 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section id="contact" data-aos="fade-left" data-aos-duration="800">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mblgevej" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -97,9 +98,13 @@
     <a href="https://www.instagram.com/harshilpatell._">Instagram</a>
     <p>© 2025 Harshil Patel. All rights reserved.</p>
   </footer>
+  <button id="backToTop" class="back-to-top">↑</button>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true
+    });
   </script>
   <script src="script.js"></script>
 </body>
