@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Harshil Patel, a passionate programmer specializing in embedded systems.">
   <title>Harshil Patel - Portfolio</title>
-  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <button id="darkToggle" class="dark-mode-btn">🌙</button>
     <nav>
       <div class="logo">Harshil Patel</div>
       <ul>
@@ -21,6 +19,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="darkToggle" class="dark-mode-btn">🌙</button>
     </nav>
     <section id="home">
       <img src="assets/profile.jpg" alt="Harshil Patel Profile Picture" class="profile-pic">
@@ -29,14 +28,10 @@
       <a href="#projects" class="cta">View My Work</a>
     </section>
   </header>
-  
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a 22-year-old self-taught programmer from India, specializing in embedded systems. I've completed my Bachelor's in Electrical Engineering from Pandit Deendayal Energy University, I love creating IoT devices and smart automation solutions for individual and commercial purposes.</p>
   </section>
-
-  <!-- Projects Section -->
   <section id="projects">
     <h2>My Projects</h2>
     <div class="project-grid">
@@ -84,8 +79,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mblgevej" method="POST">
@@ -94,13 +87,9 @@
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  
-    <!-- These will display the success/error messages -->
     <div id="form-status" style="display: none;"></div>
     <div id="form-error" style="display: none;"></div>
   </section>
-  
-
   <footer>
     <p>Connect with me:</p>
     <a href="https://github.com/HarryPatel23">GitHub</a> |
@@ -108,10 +97,9 @@
     <a href="https://www.instagram.com/harshilpatell._">Instagram</a>
     <p>© 2025 Harshil Patel. All rights reserved.</p>
   </footer>
-  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-  AOS.init();
+    AOS.init();
   </script>
   <script src="script.js"></script>
 </body>
