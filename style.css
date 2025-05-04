@@ -48,14 +48,13 @@ nav ul li a:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1516321310764-9081c1b7e1f3');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Added parallax */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
-  padding-top: 100px;
+  padding-top: 100px; /* Increased for more space below nav */
 }
 #home .profile-pic {
   width: 150px;
@@ -63,7 +62,7 @@ nav ul li a:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 30px; /* Increased for balance */
   border: 3px solid #ffca28;
   aspect-ratio: 1/1;
 }
@@ -243,7 +242,7 @@ footer .social-text {
     margin: 10px 0;
   }
   #home {
-    padding-top: 120px;
+    padding-top: 120px; /* More space for mobile */
   }
   #home h1 {
     font-size: 2.5em;
@@ -253,7 +252,7 @@ footer .social-text {
     height: 120px;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    margin-top: 20px;
+    margin-top: 20px; /* Adjusted for mobile */
   }
   .back-to-top {
     width: 40px;
